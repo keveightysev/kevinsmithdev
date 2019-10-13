@@ -1,5 +1,5 @@
 const random = () => {
-  return Math.floor(Math.random() * 2000) + 1;
+  return Math.floor(Math.random() * 2900) + 1;
 };
 
 const generateStars = stars => {
