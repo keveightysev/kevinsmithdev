@@ -1,13 +1,13 @@
-const random = () => {
-  return Math.floor(Math.random() * 2900) + 1;
+const random = max => {
+  return Math.floor(Math.random() * max) + 1;
 };
 
-const generateStars = stars => {
+const generateStars = (stars, width, height) => {
   const values = [];
 
   for (let i = 1; i < stars; i += 1) {
-    const x = `${random()}px`;
-    const y = `${random()}px`;
+    const x = `${random(width)}px`;
+    const y = `${random(height)}px`;
     const keyColor = i % 3 !== 0 ? "rgba(255, 255, 255, 0.3)" : "#fff";
     values.push({
       boxShadow: `${x} ${y} #fff, `,

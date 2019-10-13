@@ -4,9 +4,11 @@ import styled from "styled-components";
 import generateStars from "./utils";
 
 const StarrySky = () => {
-  const small = generateStars(800);
-  const medium = generateStars(500);
-  const large = generateStars(200);
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const small = generateStars(width * 0.4, width, height);
+  const medium = generateStars(width * 0.25, width, height);
+  const large = generateStars(width * 0.1, width, height);
   return (
     <Starfield small={small} medium={medium} large={large} role="presentation">
       <div className="small" role="presentation" />
