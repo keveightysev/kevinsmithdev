@@ -1,7 +1,16 @@
 import React from "react";
 
+import Global from "./styles/Global";
+
+import StarrySky from "./other/StarrySky";
+
 function App() {
-  return <h1>Kevin Smith</h1>;
+  return (
+    <>
+      <Global />
+      <StarrySky />
+    </>
+  );
 }
 
 export default App;
