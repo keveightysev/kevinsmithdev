@@ -9,6 +9,7 @@ function App() {
     <>
       <Global />
       <StarrySky />
+      <h1 style={{ color: "white" }}>Kevin Smith</h1>
     </>
   );
 }

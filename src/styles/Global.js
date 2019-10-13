@@ -21,6 +21,7 @@ const Global = createGlobalStyle`
 
     body {
         background: #1D0030;
+        font-family: 'Montserrat', sans-serif;
     }
 
     #root {
@@ -35,6 +36,10 @@ const Global = createGlobalStyle`
             rgb(158, 0, 126, 0.75),
             transparent
             );
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
     }
 `;
 
