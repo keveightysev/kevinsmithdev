@@ -25,6 +25,23 @@ const NavLink = styled(Link)`
 	&:hover:before {
 		width: 100%;
 	}
+
+	@media (max-width: 850px) {
+		width: 100%;
+		padding: 5px 20px;
+		text-align: right;
+		&:not(:last-of-type) {
+			border-bottom: 1px solid ${white};
+		}
+
+		&:hover {
+			background: ${({ color }) => color};
+		}
+
+		&:before {
+			content: none;
+		}
+	}
 `;
 
 export default NavLink;

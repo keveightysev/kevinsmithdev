@@ -9,16 +9,30 @@ const Name = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
-	height: 60px;
+	height: 50px;
 	user-select: none;
 
+	@media (max-width: 400px) {
+		justify-content: normal;
+	}
+
 	h1 {
-		font-size: 3.5rem;
+		font-size: 3.4rem;
 		line-height: 0.8;
 		margin-bottom: 5px;
+
+		@media (max-width: 400px) {
+			width: 50%;
+			font-size: 3rem;
+			margin-left: -20px;
+		}
 	}
 	h2 {
 		font-size: 1.6rem;
+
+		@media (max-width: 400px) {
+			display: none;
+		}
 	}
 `;
 

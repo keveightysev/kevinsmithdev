@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import { HeaderStyle, Name, Nav, NavLink } from './styles';
-import Logo from '../../styles/Logo';
+import NavBar from './NavBar';
 
-import { red, yellow, green, blue, violet } from '../../styles/constants';
+import { HeaderStyle, Name } from './styles';
+import Logo from '../../styles/Logo';
 
 const Header: FC = () => {
 	return (
@@ -13,23 +13,7 @@ const Header: FC = () => {
 				<h1>Kevin Smith</h1>
 				<h2>Web developer extraordinaire</h2>
 			</Name>
-			<Nav>
-				<NavLink to="/home" color={red}>
-					Home
-				</NavLink>
-				<NavLink to="/about" color={yellow}>
-					About
-				</NavLink>
-				<NavLink to="/work" color={green}>
-					Work
-				</NavLink>
-				<NavLink to="/journal" color={blue}>
-					Journal
-				</NavLink>
-				<NavLink to="/contact" color={violet}>
-					Contact
-				</NavLink>
-			</Nav>
+			<NavBar />
 		</HeaderStyle>
 	);
 };
