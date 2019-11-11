@@ -3,7 +3,8 @@ import { Link } from '@reach/router';
 
 import { white } from '../../../styles/constants';
 
-const NavLink = styled(Link)`
+const NavLink = styled(Link)(
+	({ color }) => `
 	color: ${white};
 	text-decoration: none;
 	font-size: 1.6rem;
@@ -14,12 +15,15 @@ const NavLink = styled(Link)`
 	&:before {
 		content: '';
 		position: absolute;
-		overflow: hidden;
 		bottom: -5px;
 		width: 0%;
 		height: 3px;
-		background: ${({ color }) => color};
+		background: ${color};
 		transition: width 300ms ease;
+	}
+
+	&[aria-current='page']:before {
+		width: 100%;
 	}
 
 	&:hover:before {
@@ -35,13 +39,14 @@ const NavLink = styled(Link)`
 		}
 
 		&:hover {
-			background: ${({ color }) => color};
+			background: ${color};
 		}
 
 		&:before {
 			content: none;
 		}
 	}
-`;
+`,
+);
 
 export default NavLink;
