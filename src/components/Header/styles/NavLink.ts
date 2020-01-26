@@ -46,7 +46,7 @@ const NavLink = styled(Link)(
 			content: none;
 		}
 	}
-`,
+`
 );
 
 export default NavLink;

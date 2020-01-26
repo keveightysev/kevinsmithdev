@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-const Contact = () => {
+const Contact: FC<RouteComponentProps> = () => {
 	return <h2>Contact section</h2>;
 };
 

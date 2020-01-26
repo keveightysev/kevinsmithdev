@@ -21,8 +21,8 @@ const Nav = styled.nav<HamburgerProps>`
 		flex-direction: column;
 		border: 1px solid ${white};
 		width: auto;
-		opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-		visibility: ${({ isOpen }) => (isOpen ? 'visibile' : 'hidden')};
+		opacity: ${({ isOpen }): string => (isOpen ? '1' : '0')};
+		visibility: ${({ isOpen }): string => (isOpen ? 'visibile' : 'hidden')};
 		overflow: hidden;
 		transition: all 0.3s ease-out;
 	}

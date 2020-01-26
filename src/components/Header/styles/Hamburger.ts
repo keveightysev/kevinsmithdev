@@ -27,7 +27,8 @@ const Hamburger = styled.button<HamburgerProps>`
 			display: block;
 			top: 50%;
 			margin-top: -2px;
-			transform: ${({ isOpen }) => (isOpen ? 'rotate(765deg)' : 'none')};
+			transform: ${({ isOpen }): string =>
+				isOpen ? 'rotate(765deg)' : 'none'};
 			transition-property: transform;
 			transition-duration: 300ms;
 			transition-timing-function: ease;
@@ -51,14 +52,15 @@ const Hamburger = styled.button<HamburgerProps>`
 			}
 
 			&::before {
-				top: ${({ isOpen }) => (isOpen ? '0' : '-10px')};
-				opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+				top: ${({ isOpen }): string => (isOpen ? '0' : '-10px')};
+				opacity: ${({ isOpen }): string => (isOpen ? '0' : '1')};
 				transition-property: top, opacity;
 			}
 
 			&::after {
-				bottom: ${({ isOpen }) => (isOpen ? '0' : '-10px')};
-				transform: ${({ isOpen }) => (isOpen ? 'rotate(90deg)' : 'none')};
+				bottom: ${({ isOpen }): string => (isOpen ? '0' : '-10px')};
+				transform: ${({ isOpen }): string =>
+					isOpen ? 'rotate(90deg)' : 'none'};
 				transition-property: bottom, transform;
 			}
 		}

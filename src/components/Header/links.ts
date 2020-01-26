@@ -4,28 +4,28 @@ const links = [
 	{
 		text: 'Home',
 		path: '/',
-		color: red,
+		color: red
 	},
 	{
 		text: 'About',
 		path: '/about',
-		color: yellow,
+		color: yellow
 	},
 	{
 		text: 'Work',
 		path: '/work',
-		color: green,
+		color: green
 	},
 	{
 		text: 'Journal',
 		path: '/journal',
-		color: blue,
+		color: blue
 	},
 	{
 		text: 'Contact',
 		path: '/contact',
-		color: violet,
-	},
+		color: violet
+	}
 ];
 
 export default links;

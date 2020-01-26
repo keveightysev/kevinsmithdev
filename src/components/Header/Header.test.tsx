@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import {
 	createHistory,
 	createMemorySource,
-	LocationProvider,
+	LocationProvider
 } from '@reach/router';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -28,11 +28,11 @@ describe('<Header />', () => {
 
 function renderWithRouter(
 	ui: React.ReactElement,
-	{ route = '/', history = createHistory(createMemorySource(route)) } = {},
+	{ route = '/', history = createHistory(createMemorySource(route)) } = {}
 ) {
 	return {
 		...render(<LocationProvider history={history}>{ui}</LocationProvider>),
-		history,
+		history
 	};
 }
 
