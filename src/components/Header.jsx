@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
+import Nav from "./Nav";
 
 const Header = () => {
   return (
     <HeaderStyle>
       <Logo />
       <h1>kevinSmith.dev</h1>
+      <Nav />
     </HeaderStyle>
   );
 };
