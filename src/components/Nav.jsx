@@ -20,7 +20,7 @@ export default Nav;
 
 const NavStyle = styled.nav`
   position: absolute;
-  top: 370px;
+  top: 355px;
   left: -205px;
   transform: rotate(90deg);
   transform-origin: top top;
