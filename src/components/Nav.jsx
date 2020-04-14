@@ -1,58 +1,46 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = () => {
-  const navigate = (location, path) => {
-    const pathname = path === location.pathname ? "/" : path;
-    return { ...location, pathname };
-  };
   return (
-    <NavStyle>
-      <Tab to={loc => navigate(loc, "/about")}>About</Tab>
-      <Tab to={loc => navigate(loc, "/work")}>My Work</Tab>
-      <Tab to={loc => navigate(loc, "/contact")}>Contact</Tab>
-    </NavStyle>
+    <nav
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "20px",
+      }}
+    >
+      <NavLink to="/about">about</NavLink>
+      <NavLink to="/work">work</NavLink>
+      <NavLink to="/contact">contact</NavLink>
+    </nav>
   );
 };
 
 export default Nav;
 
-const NavStyle = styled.nav`
-  position: absolute;
-  top: 355px;
-  left: -205px;
-  transform: rotate(90deg);
-  transform-origin: top top;
-  display: flex;
-  align-items: flex-end;
-  height: 75px;
-`;
-
-const Tab = styled(NavLink)`
+const NavLink = styled(Link)`
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
   text-decoration: none;
-  color: black;
-  background: #e8e8e8;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  margin: 0 5px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 150px;
-  height: 50px;
-  transition: all 300ms ease;
-  padding-top: 10px;
-  cursor: pointer;
+  margin: 10px 0;
+  box-sizing; border-box;
+  position: relative;
 
-  &:hover {
-    height: 75px;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    border-bottom: 5px solid #fff;
+    transition: all 300ms ease;
   }
 
-  &.active {
-    height: 75px;
+  &:hover:before {
+   width: 100%;
   }
 `;
