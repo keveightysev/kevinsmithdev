@@ -6,4 +6,5 @@ export default styled.section`
   max-width: 1200px;
   margin-top: 90px;
   background: #000;
+  padding: 10px 2%;
 `;
