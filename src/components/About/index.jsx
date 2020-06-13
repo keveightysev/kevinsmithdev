@@ -5,7 +5,7 @@ const About = () => {
     <section
       style={{
         minWidth: "700px",
-        width: "80vw",
+        width: "50vw",
         maxWidth: "1200px",
         // height: "80vh",
         marginTop: "90px",

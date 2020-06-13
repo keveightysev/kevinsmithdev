@@ -4,10 +4,14 @@ import styled from "styled-components";
 
 import Logo from "./Logo";
 const Nav = () => {
-  const { location } = useHistory();
+  const {
+    location: { pathname },
+  } = useHistory();
   return (
-    <Header home={location.pathname === "/"}>
-      <Logo home={location.pathname === "/"} />
+    <Header home={pathname === "/"}>
+      <Link to="/">
+        <Logo home={pathname === "/"} title="Kevin Smith" />
+      </Link>
       <nav>
         <Link to="/about">about</Link>
         <Link to="/work">work</Link>
@@ -23,12 +27,12 @@ const Header = styled.header`
   display: flex;
   flex-direction: ${({ home }) => (home ? "column" : "row")};
   align-items: center;
-  width:${({ home }) => (home ? "auto" : "50%")};
+  width:${({ home }) => (home ? "auto" : "55%")};
   ${({ home }) =>
     !home &&
     `
     position: absolute; 
-    // top: -100px; 
+    top: 20px; 
     left: 0;
   `}
 
@@ -37,9 +41,9 @@ const Header = styled.header`
     flex-direction: ${({ home }) => (home ? "column" : "row")};
     align-items: center;
     margin-top: ${({ home }) => (home ? "20px" : "5px")};
-    // margin-left: ${({ home }) => (home ? "0" : "10px")};
+    margin-left: ${({ home }) => (home ? "0" : "90px")};
     width: ${({ home }) => (home ? "auto" : "80%")};
-    justify-content: space-evenly;
+    justify-content: space-between;
   
     a {
       font-family: "Lucida Console", Monaco, monospace;
