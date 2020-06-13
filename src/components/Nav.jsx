@@ -8,9 +8,9 @@ const Nav = () => {
     location: { pathname },
   } = useHistory();
   return (
-    <Header home={pathname === "/"}>
+    <Header home={pathname === "/" ? 1 : 0}>
       <Link to="/">
-        <Logo home={pathname === "/"} title="Kevin Smith" />
+        <Logo home={pathname === "/" ? 1 : 0} title="Kevin Smith" />
       </Link>
       <nav>
         <Link to="/about">about</Link>
