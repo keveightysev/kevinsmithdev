@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { Background, Logo, Nav } from "./components";
+import { Background, Nav, About } from "./components";
 
 function App() {
   return (
     <main className="App">
       <Container>
-        <Logo />
+        <Nav />
         <Switch>
-          <Route exact path="/" component={Nav} />
+          <Route path="/about" component={About} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </Container>
@@ -23,7 +23,7 @@ export default App;
 
 const Container = styled.div`
   position: absolute;
-  overflow: auto;
+  // overflow: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

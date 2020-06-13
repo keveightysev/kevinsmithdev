@@ -11,7 +11,7 @@ const Background = () => {
     return () => canvas.stop();
   }, [cnvs]);
   return (
-    <div id="background" role="img">
+    <div id="background" role="presentation">
       <div role="img">{generateText()}</div>
       <canvas ref={cnvs} width="32" height="32" />
     </div>
