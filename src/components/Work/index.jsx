@@ -61,6 +61,7 @@ const ProjectLink = styled(Link)`
   width: 45%;
   height: 150px;
   margin: 10px;
+  text-decoration: none;
 `;
 
 const ProjectLi = styled.li`
