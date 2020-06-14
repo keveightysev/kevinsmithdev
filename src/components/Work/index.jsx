@@ -6,7 +6,11 @@ const Work = () => {
   return (
     <Container>
       <h1>Work</h1>
-      <p>gonna show some werq here</p>
+      <p>
+        Here is a selection of projects that I have worked on or am currently
+        working on.
+      </p>
+      <h2>Team Projects</h2>
     </Container>
   );
 };
