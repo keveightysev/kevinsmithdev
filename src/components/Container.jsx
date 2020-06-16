@@ -7,4 +7,6 @@ export default styled.section`
   margin-top: 90px;
   background: #000;
   padding: 10px 2%;
+  overflow: auto;
+  height: 40vh;
 `;
