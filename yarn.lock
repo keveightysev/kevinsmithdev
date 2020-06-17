@@ -1017,6 +1017,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify/icons-carbon@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-carbon/-/icons-carbon-1.0.2.tgz#970ecb4ed29f8e422dee7ae92163754d0e10fa23"
+  integrity sha512-AV/SKR+HXwoMV2SYzEXqlSkZtSKUMGzo8VhhcHVnvXAPuQCRKJEOQqHZYvLN2m5UcskmZBmxtB3b1H7w5WN39w==
+
 "@iconify/icons-logos@^1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.0.11.tgz#ef8bd8c8347965827aeea8c0b64dc03ec1d0498e"
