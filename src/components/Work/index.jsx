@@ -30,7 +30,7 @@ const Work = () => {
       >
         {teamProjects.map((p) => {
           return (
-            <ProjectLink to={`/project/${p.slug}`}>
+            <ProjectLink to={`/project/${p.slug}`} key={p.slug}>
               <ProjectLi background={p.image}>{p.title}</ProjectLi>
             </ProjectLink>
           );
@@ -45,7 +45,7 @@ const Work = () => {
       >
         {personalProjects.map((p) => {
           return (
-            <ProjectLink to={`/project/${p.slug}`}>
+            <ProjectLink to={`/project/${p.slug}`} key={p.slug}>
               <ProjectLi background={p.image}>{p.title}</ProjectLi>
             </ProjectLink>
           );

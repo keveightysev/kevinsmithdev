@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { Background, Nav, About, Contact, Work } from "./components";
+import { Background, Nav, About, Contact, Work, Project } from "./components";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/work" component={Work} />
           <Route path="/contact" component={Contact} />
+          <Route path="/project/:slug" component={Project} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </Container>
