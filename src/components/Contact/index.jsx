@@ -54,6 +54,9 @@ const Link = styled.a`
   padding: 2%;
   border-radius: 5px;
   margin-bottom: 10px;
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 
 const Email = styled.section`
@@ -69,6 +72,9 @@ const Email = styled.section`
   margin-bottom: 10px;
   padding: 2%;
   cursor: pointer;
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 
   svg {
     margin-left: 10px;

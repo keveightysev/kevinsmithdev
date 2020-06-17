@@ -62,6 +62,9 @@ const ProjectLink = styled(Link)`
   height: 150px;
   margin: 10px;
   text-decoration: none;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const ProjectLi = styled.li`

@@ -36,6 +36,10 @@ const Header = styled.header`
     left: 0;
   `}
 
+  @media (max-width: 500px) {
+    width: ${({ home }) => (home ? "auto" : "95%")};;
+  }
+
   nav {
     display: flex;
     flex-direction: ${({ home }) => (home ? "column" : "row")};
@@ -44,6 +48,9 @@ const Header = styled.header`
     margin-left: ${({ home }) => (home ? "0" : "90px")};
     width: ${({ home }) => (home ? "auto" : "80%")};
     justify-content: space-between;
+    @media (max-width: 500px) {
+      width: ${({ home }) => (home ? "auto" : "80vw")};;
+    }
   
     a {
       font-family: "Lucida Console", Monaco, monospace;
@@ -54,6 +61,10 @@ const Header = styled.header`
       margin: 10px 0;
       box-sizing; border-box;
       position: relative;
+
+      @media (max-width: 500px) {
+        font-size: ${({ home }) => (home ? "4rem" : "2rem")};;
+      }
     
       &:before {
         content: '';

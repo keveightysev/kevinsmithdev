@@ -10,6 +10,12 @@ export default styled.section`
   overflow: auto;
   height: 40vh;
 
+  @media (max-width: 400px) {
+    min-width: auto;
+    width: 95vw;
+    height: 75vh;
+  }
+
   &::-webkit-scrollbar {
     width: 10px;
   }
