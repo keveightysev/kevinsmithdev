@@ -6,7 +6,7 @@ import gsd from "../assets/images/gsd.png";
 import recaller from "../assets/images/recaller.png";
 import pricenavigator from "../assets/images/pricenavigator.png";
 
-export default [
+const projects = [
   {
     title: "Kansha Rewards",
     slug: "kansha-rewards",
@@ -154,3 +154,5 @@ export default [
     ],
   },
 ];
+
+export default projects;

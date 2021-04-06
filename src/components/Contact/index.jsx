@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
 import linkedinIcon from "@iconify/icons-logos/linkedin";

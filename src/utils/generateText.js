@@ -1,4 +1,4 @@
-export default function() {
+const generateText = function () {
   const chars =
     "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`~!@#$%^&*()-=_+[]:;'<>/?.,";
   const strLength = 100000;
@@ -8,4 +8,6 @@ export default function() {
     rString += chars.substring(randomNumber, randomNumber + 1) + " ";
   }
   return rString;
-}
+};
+
+export default generateText;

@@ -8,7 +8,7 @@ import firebaseIcon from "@iconify/icons-logos/firebase";
 import twilioIcon from "@iconify/icons-logos/twilio";
 import stripeIcon from "@iconify/icons-logos/stripe";
 
-export default {
+const icons = {
   react: <Icon icon={reactIcon} width="5rem" />,
   node: <Icon icon={nodejsIcon} width="5rem" />,
   redux: <Icon icon={reduxIcon} width="5rem" />,
@@ -17,3 +17,5 @@ export default {
   twilio: <Icon icon={twilioIcon} width="5rem" />,
   stripe: <Icon icon={stripeIcon} width="5rem" />,
 };
+
+export default icons;

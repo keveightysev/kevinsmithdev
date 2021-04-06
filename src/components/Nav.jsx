@@ -1,16 +1,14 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import Logo from "./Logo";
+
 const Nav = () => {
-  const {
-    location: { pathname },
-  } = useHistory();
+  const { pathname } = useLocation();
   return (
-    <Header home={pathname === "/" ? 1 : 0}>
+    <Header home={pathname === "/"}>
       <Link to="/">
-        <Logo home={pathname === "/" ? 1 : 0} title="Kevin Smith" />
+        <Logo home={pathname === "/"} title="Kevin Smith" />
       </Link>
       <nav>
         <Link to="/about">about</Link>
@@ -25,7 +23,10 @@ export default Nav;
 
 const Header = styled.header`
   display: flex;
-  flex-direction: ${({ home }) => (home ? "column" : "row")};
+  flex-direction: ${({ home }) => {
+    console.log(home);
+    return home ? "column" : "row";
+  }};
   align-items: center;
   width:${({ home }) => (home ? "auto" : "55%")};
   ${({ home }) =>
