@@ -6,9 +6,9 @@ import Logo from "./Logo";
 const Nav = () => {
   const { pathname } = useLocation();
   return (
-    <Header home={pathname === "/"}>
+    <Header home={pathname === "/" ? 1 : 0}>
       <Link to="/">
-        <Logo home={pathname === "/"} title="Kevin Smith" />
+        <Logo home={pathname === "/" ? 1 : 0} title="Kevin Smith" />
       </Link>
       <nav>
         <Link to="/about">about</Link>
@@ -23,10 +23,7 @@ export default Nav;
 
 const Header = styled.header`
   display: flex;
-  flex-direction: ${({ home }) => {
-    console.log(home);
-    return home ? "column" : "row";
-  }};
+  flex-direction: ${({ home }) => (home ? "column" : "row")}};
   align-items: center;
   width:${({ home }) => (home ? "auto" : "55%")};
   ${({ home }) =>
